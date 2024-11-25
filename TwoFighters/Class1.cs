@@ -1,6 +1,11 @@
 ﻿namespace TwoFighters;
 
-public class Class1
+public class Kata
 {
 
+}
+
+public class Fighter
+{
+    public string Name { get; set; }
 }
