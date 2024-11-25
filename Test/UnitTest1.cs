@@ -43,4 +43,18 @@ public class UnitTest1
         // assert
         fighter.DamagePerAttack.Should().Be(1);
     }
+    
+    [Fact(DisplayName = "Fighter should be able to take damage")]
+    public void FighterShouldTakeDamage()
+    {
+        // arrange
+        var fighter = new Fighter();
+        fighter.Health = 1;
+        
+        // act
+        fighter.TakeDamage(1);
+        
+        // assert
+        fighter.Health.Should().Be(0);
+    }
 }
