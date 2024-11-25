@@ -16,8 +16,8 @@
 
 Fighter-klassen
 1. ~~Testa att en fighter har ett namn~~
-2. Testa att en fighter har hp
-3. Testa att en fighter har skadepoäng
+2. ~~Testa att en fighter har hp~~
+3. ~~Testa att en fighter har skadepoäng~~
 4. Testa att en fighters hp kan sänkas (ta skada)
 
 Fighten
