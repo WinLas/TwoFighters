@@ -1,3 +1,4 @@
+using System.Net;
 using FluentAssertions;
 using TwoFighters;
 
@@ -43,18 +44,47 @@ public class UnitTest1
         // assert
         fighter.DamagePerAttack.Should().Be(1);
     }
-    
+
     [Fact(DisplayName = "Fighter should be able to take damage")]
     public void FighterShouldTakeDamage()
     {
         // arrange
         var fighter = new Fighter();
         fighter.Health = 1;
-        
+
         // act
         fighter.TakeDamage(1);
-        
+
         // assert
         fighter.Health.Should().Be(0);
     }
+
+    [Fact(DisplayName = "A fighter should win")]
+    public void DeclareWinnerShouldReturnTheWinner()
+    {
+        //arrange
+        var fighter1 = new Fighter
+        {
+            Name = "Lew",
+            Health = 5,
+            DamagePerAttack = 3
+        };
+
+        var fighter2 = new Fighter
+        {
+            Name = "Harry",
+            Health = 1,
+            DamagePerAttack = 1
+        };
+
+        //act
+
+        var result = Fight.DeclareWinner(fighter1, fighter2, fighter1.Name);
+
+        //assert
+
+        result.Should().Be(fighter1.Name);
+
+    }
+    
 }
