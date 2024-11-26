@@ -58,59 +58,31 @@ public class UnitTest1
         fighter.Health.Should().Be(0);
     }
 
-    [Fact(DisplayName = "Fighter A should be able to win")]
-    public void DeclareWinnerShouldReturnTheWinner()
+    [Theory(DisplayName = "Fighter A should be able to win")]
+    [InlineData(1, 1, 1, 1, "Lew", "Lew")]
+    [InlineData(1, 1, 1, 1, "Harry", "Harry")]
+    [InlineData(1, 1, 2, 1, "Lew", "Harry")]
+    public void DeclareWinnerShouldReturnTheWinner(int fighterHealthA, int fighterDamageA, int fighterHealthB, int fighterDamageB, string startingFighter, string expectedWinner)
     {
         //arrange
-        var fighter1 = new Fighter
+        var fighterA = new Fighter
         {
             Name = "Lew",
-            Health = 1,
-            DamagePerAttack = 1
+            Health = fighterHealthA,
+            DamagePerAttack = fighterDamageA
         };
 
-        var fighter2 = new Fighter
+        var fighterB = new Fighter
         {
             Name = "Harry",
-            Health = 1,
-            DamagePerAttack = 1
+            Health = fighterHealthB,
+            DamagePerAttack = fighterDamageB
         };
 
         //act
-
-        var result = Fight.DeclareWinner(fighter1, fighter2, fighter1.Name);
-
-        //assert
-
-        result.Should().Be(fighter1.Name);
-
-    }
-    
-    [Fact(DisplayName = "Fighter B should be able to win")]
-    public void DeclareWinner_WhenHarryStarts_ShouldReturnHarryAsWinner()
-    {
-        //arrange
-        var fighter1 = new Fighter
-        {
-            Name = "Lew",
-            Health = 1,
-            DamagePerAttack = 1
-        };
-
-        var fighter2 = new Fighter
-        {
-            Name = "Harry",
-            Health = 1,
-            DamagePerAttack = 1
-        };
-
-        //act
-
-        var result = Fight.DeclareWinner(fighter1, fighter2, fighter2.Name);
+        var result = Fight.DeclareWinner(fighterA, fighterB, startingFighter);
 
         //assert
-
-        result.Should().Be(fighter2.Name);
+        result.Should().Be(expectedWinner);
     }
-    
 }

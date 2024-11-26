@@ -33,7 +33,7 @@ Starter           |  Second fighter
 
 | HP | DPA | Name  | HP | DPA | Name  | Winner |
 |----|-----|-------|----|-----|-------|--------|
-| 1  | 1   | Lew   | 1  | 1   | Harry | Lew    |  -> starter kills on first hit
-| 1  | 1   | Harry | 1  | 1   | Lew   | Harry  |  -> starter kills on first hit
-| 1  | 1   | Lew   | 2  | 1   | Harry | Harry  |  -> first punch is not deadly, second is winner
-|    |     |       |    |     |       |        |  -> an actual fight
+| 1  | 1   | Lew   | 1  | 1   | Harry | Lew    |  -> ~~starter kills on first hit~~ ✅
+| 1  | 1   | Harry | 1  | 1   | Lew   | Harry  |  -> ~~starter kills on first hit~~ ✅
+| 1  | 1   | Lew   | 2  | 1   | Harry | Harry  |  -> ~~first punch is not deadly, second is winner~~ ✅
+| 2  | 1   | Lew   | 2  | 1   | Harry | Lew    |  -> Second punches are deadly
