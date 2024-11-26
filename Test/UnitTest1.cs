@@ -1,4 +1,3 @@
-using System.Net;
 using FluentAssertions;
 using TwoFighters;
 
@@ -20,7 +19,7 @@ public class UnitTest1
     }
     
     [Fact(DisplayName = "Fighter should have hp")]
-    public void FighterShouldHaveHP()
+    public void FighterShouldHaveHp()
     {
         // arrange
         var fighter = new Fighter();
@@ -59,15 +58,15 @@ public class UnitTest1
         fighter.Health.Should().Be(0);
     }
 
-    [Fact(DisplayName = "A fighter should win")]
+    [Fact(DisplayName = "Fighter A should be able to win")]
     public void DeclareWinnerShouldReturnTheWinner()
     {
         //arrange
         var fighter1 = new Fighter
         {
             Name = "Lew",
-            Health = 5,
-            DamagePerAttack = 3
+            Health = 1,
+            DamagePerAttack = 1
         };
 
         var fighter2 = new Fighter
@@ -87,7 +86,7 @@ public class UnitTest1
 
     }
     
-    [Fact(DisplayName = "A fighter should win")]
+    [Fact(DisplayName = "Fighter B should be able to win")]
     public void DeclareWinner_WhenHarryStarts_ShouldReturnHarryAsWinner()
     {
         //arrange
