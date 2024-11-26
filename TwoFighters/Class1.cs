@@ -22,7 +22,6 @@ public static class Fight
     public static string DeclareWinner(Fighter fighter1, Fighter fighter2, string starter)
     {
         
-
-        return "Lew";
+        return starter;
     }
 }

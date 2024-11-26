@@ -87,4 +87,31 @@ public class UnitTest1
 
     }
     
+    [Fact(DisplayName = "A fighter should win")]
+    public void DeclareWinner_WhenHarryStarts_ShouldReturnHarryAsWinner()
+    {
+        //arrange
+        var fighter1 = new Fighter
+        {
+            Name = "Lew",
+            Health = 1,
+            DamagePerAttack = 1
+        };
+
+        var fighter2 = new Fighter
+        {
+            Name = "Harry",
+            Health = 1,
+            DamagePerAttack = 1
+        };
+
+        //act
+
+        var result = Fight.DeclareWinner(fighter1, fighter2, fighter2.Name);
+
+        //assert
+
+        result.Should().Be(fighter2.Name);
+    }
+    
 }
