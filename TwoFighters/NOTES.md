@@ -14,6 +14,14 @@
 ### Time 🍅
 ### Notes:
 
+välj start fighter
+loop
+   slå
+   kolla om någon är död
+   print output
+   byt fighter om inte död
+returnera vinnare
+
 Fighter-klassen
 1. ~~Testa att en fighter har ett namn~~
 2. ~~Testa att en fighter har hp~~
@@ -36,4 +44,4 @@ Starter           |  Second fighter
 | 1  | 1   | Lew   | 1  | 1   | Harry | Lew    |  -> ~~starter kills on first hit~~ ✅
 | 1  | 1   | Harry | 1  | 1   | Lew   | Harry  |  -> ~~starter kills on first hit~~ ✅
 | 1  | 1   | Lew   | 2  | 1   | Harry | Harry  |  -> ~~first punch is not deadly, second is winner~~ ✅
-| 2  | 1   | Lew   | 2  | 1   | Harry | Lew    |  -> Second punches are deadly
+| 4  | 1   | Lew   | 4  | 1   | Harry | Lew    |  -> Second punches are deadly

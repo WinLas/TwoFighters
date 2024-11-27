@@ -62,6 +62,7 @@ public class UnitTest1
     [InlineData(1, 1, 1, 1, "Lew", "Lew")]
     [InlineData(1, 1, 1, 1, "Harry", "Harry")]
     [InlineData(1, 1, 2, 1, "Lew", "Harry")]
+    [InlineData(4, 1, 4, 1, "Lew", "Lew")]
     public void DeclareWinnerShouldReturnTheWinner(int fighterHealthA, int fighterDamageA, int fighterHealthB, int fighterDamageB, string startingFighter, string expectedWinner)
     {
         //arrange
