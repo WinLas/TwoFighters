@@ -57,6 +57,24 @@ public class UnitTest1
         // assert
         fighter.Health.Should().Be(0);
     }
+    
+    [Theory(DisplayName = "Fighter should be able to say if hes alive")]
+    [InlineData(1, true)]
+    [InlineData(0, false)]
+    public void FighterShouldBeAbleToSayIfHesAlive(int health, bool expected)
+    {
+        // arrange
+        var fighter = new Fighter
+        {
+            Health = health
+        };
+
+        // act
+        var result = fighter.IsAlive;
+
+        // assert
+        result.Should().Be(expected);
+    }
 
     [Theory(DisplayName = "Fighter A should be able to win")]
     [InlineData(1, 1, 1, 1, "Lew", "Lew")]
